@@ -1,0 +1,29 @@
+{
+    "BasiqueAgent": {
+        "checkpoints": [
+            {
+                "steps": 171294,
+                "file_path": "results\\basiqueAgent_1\\BasiqueAgent\\BasiqueAgent-171294.onnx",
+                "reward": null,
+                "creation_time": 1672249943.4975076,
+                "auxillary_file_paths": [
+                    "results\\basiqueAgent_1\\BasiqueAgent\\BasiqueAgent-171294.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 171294,
+            "file_path": "results\\basiqueAgent_1\\BasiqueAgent.onnx",
+            "reward": null,
+            "creation_time": 1672249943.4975076,
+            "auxillary_file_paths": [
+                "results\\basiqueAgent_1\\BasiqueAgent\\BasiqueAgent-171294.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
