@@ -8,11 +8,12 @@ using Unity.MLAgents.Sensors;
 public class BasiqueAgent : Agent
 {
 
-    
-    public AreneManager manager;
-    private Rigidbody rb;
     [SerializeField]
-    private GameObject Objectif;
+    private AreneManager manager;
+    private Rigidbody rb;
+
+    public GameObject Objectif;
+
 
     public float speed;
     public float jumpForce;
@@ -70,7 +71,6 @@ public class BasiqueAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        //base.CollectObservations(sensor);
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(Objectif.transform.localPosition);
 
@@ -96,14 +96,5 @@ public class BasiqueAgent : Agent
             manager.FailedTask();
             EndEpisode();
         }
-
-        if (collision.collider.CompareTag("obs"))
-        {
-            //getPunition
-            SetReward(-1f);
-            manager.FailedTask();
-            EndEpisode();
-        }
-
     }
 }

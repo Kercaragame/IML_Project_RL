@@ -10,32 +10,55 @@ public class AreneManagerAdvanced : AreneManager
     public int nombreObstacle;
     public float margeBtwObsX;
     public float margeBtwObsZ;
-
+    public float margeToObjectif;
 
     [SerializeField]
     private List<GameObject> obsList = new List<GameObject>();
+
+    public BasiqueAgentAdvanced agentScript;
 
     public override void resetRun()
     {
         resetOBS();
         createOBS(nombreObstacle);
+        agentScript.setObs(obsList);
+        setAgentAndGoalPosition();
 
+    }
+
+    private void setAgentAndGoalPosition()
+    {
+
+        resetObjectifPos = new Vector3(Random.Range(-7f, 9f), 1.07f, Random.Range(-9f, 8f));
         resetAgentPos = new Vector3(Random.Range(-4.4f, 3.3f), 1.5f, Random.Range(-4.4f, 3.4f));
-        agent.transform.localPosition = resetAgentPos;
+        float distance = Vector3.Distance(resetObjectifPos, resetAgentPos);
 
-        //new implementation
+
+        while (distance < margeToObjectif)
+        {
+            resetAgentPos = new Vector3(Random.Range(-4.4f, 3.3f), 1.5f, Random.Range(-4.4f, 3.4f));
+            distance = Vector3.Distance(resetObjectifPos, resetAgentPos);
+        }
+
+        agent.transform.localPosition = resetAgentPos;
+        objectif.transform.localPosition = resetObjectifPos;
+    }
+    private void Update()
+    {
+        float distance = Vector3.Distance(objectif.transform.position, agent.transform.position);
+        Debug.DrawLine(objectif.transform.position, agent.transform.position, Color.green);
     }
 
     private void createOBS(int nbOBS)
     {
         for(int i = 0; i < nbOBS; i++)
         {
-            Vector3 obsPos = new Vector3(Random.Range(-8f, 8f), 0.68f, Random.Range(-7f, 8f));
+            Vector3 obsPos = new Vector3(Random.Range(-8f, 8f), 2.02f, Random.Range(-7f, 8f));
             Quaternion obsRot = Quaternion.Euler(0, Random.Range(0, 360), 0);
 
             if(checkDistance(obsPos) == false)
             {
-                obsPos = new Vector3(Random.Range(-8f, 8f), 0.68f, Random.Range(-7f, 8f));
+                obsPos = new Vector3(Random.Range(-8f, 8f), 2.02f, Random.Range(-7f, 8f));
                 obsRot = Quaternion.Euler(0, Random.Range(0, 360), 0);
                 i--;
             }
@@ -78,30 +101,12 @@ public class AreneManagerAdvanced : AreneManager
             GameObject obs = obsList[i];
             obsList.RemoveAt(i);
             Destroy(obs);
-            print(obsList.Count);
         }
     }
 
 }
 
-/*  public void resetRun()
-    {
-        float margePos = 3f;
-        resetObjectifPos = new Vector3(Random.Range(-5.8f, 2f), 0.16f, Random.Range(-4.57f, 3.3f));
-        resetAgentPos = new Vector3(Random.Range(-4.4f, 3.3f), 1.5f, Random.Range(-4.4f, 3.4f));
-        //print("Distance : " + Mathf.Abs(resetObjectifPos.x - resetAgentPos.x));
-
-
-        while (Mathf.Abs(resetObjectifPos.x - resetAgentPos.x) < margePos)
-        {
-            resetAgentPos = new Vector3(Random.Range(-4.4f, 3.3f), 1.5f, Random.Range(-4.4f, 3.4f));
-
-        }
-        agent.transform.localPosition = resetAgentPos;
-        objectif.transform.localPosition = resetObjectifPos;
-
-
-    }
+/*
  int minSpawnHealth = 10;
  int maxSpawnHealth = 30;
  int stepSize = 5;
