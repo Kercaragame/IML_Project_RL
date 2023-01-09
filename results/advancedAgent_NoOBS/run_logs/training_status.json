@@ -1,0 +1,56 @@
+{
+    "BasiqueAgentAdvanced": {
+        "checkpoints": [
+            {
+                "steps": 499945,
+                "file_path": "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499945.onnx",
+                "reward": 1.0097167395307856,
+                "creation_time": 1673259975.148833,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499945.pt"
+                ]
+            },
+            {
+                "steps": 538044,
+                "file_path": "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-538044.onnx",
+                "reward": 1.0786571676532428,
+                "creation_time": 1673260226.5894697,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-538044.pt"
+                ]
+            },
+            {
+                "steps": 999971,
+                "file_path": "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999971.onnx",
+                "reward": 1.0519667863845825,
+                "creation_time": 1673260823.12543,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999971.pt"
+                ]
+            },
+            {
+                "steps": 1000027,
+                "file_path": "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1000027.onnx",
+                "reward": 1.0550765991210938,
+                "creation_time": 1673260823.170489,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1000027.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000027,
+            "file_path": "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced.onnx",
+            "reward": 1.0550765991210938,
+            "creation_time": 1673260823.170489,
+            "auxillary_file_paths": [
+                "results\\advancedAgent_NoOBS\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1000027.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -22,6 +22,7 @@ public class AreneManager : MonoBehaviour
 
     public virtual void resetRun()
     {
+        print("normal reset");
         float margePos = 3f;
         resetObjectifPos = new Vector3(Random.Range(-5.8f, 2f), 0.16f, Random.Range(-4.57f, 3.3f));
         resetAgentPos = new Vector3(Random.Range(-4.4f, 3.3f), 1.5f, Random.Range(-4.4f, 3.4f));

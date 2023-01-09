@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5100
+  m_VersionIndex: 5217
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6310
+  m_VersionIndex: 6427
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -723,7 +723,6 @@ GameObject:
   - component: {fileID: 609740357040469209}
   - component: {fileID: 609740357040469210}
   - component: {fileID: 609740357040469211}
-  - component: {fileID: 609740357040469208}
   m_Layer: 0
   m_Name: Eye (1)
   m_TagString: Untagged
@@ -796,19 +795,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &609740357040469208
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609740357040469214}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &609740357286692356
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +811,7 @@ GameObject:
   - component: {fileID: 609740357286692355}
   - component: {fileID: 609740357286692354}
   - component: {fileID: 1144520213927609362}
+  - component: {fileID: 3342589172227131221}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -840,7 +827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609740357286692356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.13, y: 1.93, z: 3.08}
+  m_LocalPosition: {x: 1.42, y: 1.93, z: -2.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -936,8 +923,8 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
-  m_BehaviorName: BasiqueAgent
+  m_BehaviorType: 0
+  m_BehaviorName: BasiqueAgentAdvanced
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -957,7 +944,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &609740357286692354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,11 +974,40 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
+  MaxStep: 3500
   manager: {fileID: 0}
-  Objectif: {fileID: 0}
-  speed: 0
-  jumpForce: 0
+  Objectif: {fileID: 609740357505485845}
+  speed: 15
+  jumpForce: 5
+  managerAdvanced: {fileID: 3332349865100890181}
+  _obsList: []
+--- !u!114 &3342589172227131221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609740357286692356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
+  - obs
+  m_RaysPerDirection: 5
+  m_MaxRayDegrees: 180
+  m_SphereCastRadius: 0
+  m_RayLength: 7
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967241
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0.12644883, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
 --- !u!1 &609740357291921379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1019,6 @@ GameObject:
   - component: {fileID: 609740357291921378}
   - component: {fileID: 609740357291921183}
   - component: {fileID: 609740357291921180}
-  - component: {fileID: 609740357291921181}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -1076,19 +1091,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &609740357291921181
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609740357291921379}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &609740357505485845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1460,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5159
+  m_VersionIndex: 5276
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1826,7 +1828,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5075
+  m_VersionIndex: 5192
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1979,11 +1981,13 @@ MonoBehaviour:
   looseMaterial: {fileID: 2100000, guid: b1a0349e4e5ad434bb2ff71e16faf3a8, type: 2}
   floorMeshRenderer: {fileID: 609740356015866597}
   obstacle: {fileID: 7535267219230184518, guid: 1e476ba8f16939b43b4c862c2cd479db, type: 3}
-  nombreObstacle: 5
+  nombreObstacle: 0
   margeBtwObsX: 2
   margeBtwObsZ: 1
   margeToObjectif: 5
+  margeToOBS: 2
   obsList: []
+  agentScript: {fileID: 1144520213927609362}
 --- !u!1 &609740357659994286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,7 +2260,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5072
+  m_VersionIndex: 5192
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

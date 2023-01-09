@@ -89,6 +89,7 @@ public class BasiqueAgent : Agent
     }
     private void OnCollisionEnter(Collision collision)
     {
+        print("normal colli");
         if (collision.collider.CompareTag("wall"))
         {
             //getPunition
