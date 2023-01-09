@@ -48,15 +48,17 @@ Si une liste d'argument s'affiche c'est que l'installation c'est bien passé vou
 
 La commande pour les trainings est la suivante :
 ```sh
-mlagents-learn <emplacement du fichier de configuration> --run-id=<nom de l training>
+mlagents-learn <emplacement du fichier de configuration> --run-id=<nom du training>
 ```
 
 L'emplacement du fichier de configuration correspond au fichier de configuration de l'IA de reinforcement learning. Ce fichier est situé dans le dossier Config\default_configuration.yaml
 
-Le nom de l'training correspond au nom que vous voulez donnez à votre IA de reinforcement learning.
+Le nom du training correspond au nom que vous voulez donnez à votre IA de reinforcement learning.
 
 La commande que nous allons utiliser est :
+```sh
 mlagents-learn Config\default_configuration.yaml --run-id=Training1
+```
 
 Pour plus d'informations sur la commande est les potentiels ajouts que vous voulez faire voici le lien vers la documentation officiel de la commande : https://github.com/Unity-Technologies/ml-agents/blob/com.unity.ml-agents_2.0.1/docs/Training-ML-Agents.md
 
