@@ -15,6 +15,18 @@ public class AreneManagerAdvanced : AreneManager
     public float margeToObjectif;
     public float margeToOBS;
 
+    [Header("MODES GENERATED\n")]
+    public bool generateOBSOnce;
+    public bool isMainArene;
+    public bool isSubscribeArene;
+    public bool testTraining;
+
+
+    [Header("TEST ENV")]
+    public List<Vector3> posSpawnOBS = new List<Vector3>();
+    public List<Quaternion> rotSpawnOBS = new List<Quaternion>();
+
+
 
     [SerializeField]
     private List<GameObject> obsList = new List<GameObject>();
@@ -23,11 +35,35 @@ public class AreneManagerAdvanced : AreneManager
 
     public BasiqueAgentAdvanced agentScript;
 
+    public void initRun()
+    {
+        if (isMainArene &&  generateOBSOnce)
+        {
+            resetOBS();
+            createOBS(nombreObstacle);
+
+            var arenes = GameObject.FindGameObjectsWithTag("areneManager");
+            foreach(GameObject a in arenes)
+            {
+                var arene = a.GetComponent<AreneManagerAdvanced>();
+                if (arene.isSubscribeArene)
+                {
+                    arene.subscribeOBS(obsList);
+                }
+            }
+
+        }else if(testTraining && generateOBSOnce)
+        {
+            generatedObsFromSave(posSpawnOBS,rotSpawnOBS);
+        }
+    }
     public override void resetRun()
     {
-        resetOBS();
-        createOBS(nombreObstacle);
-        agentScript.setObs(obsList);
+        if (!generateOBSOnce)
+        {
+            resetOBS();
+            createOBS(nombreObstacle);
+        }
         setAgentAndGoalPosition();
 
 
@@ -108,7 +144,29 @@ public class AreneManagerAdvanced : AreneManager
 
         }
     }
-   
+
+    private void subscribeOBS(List<GameObject> copyOBS)
+    {
+        foreach(GameObject obs in copyOBS)
+        {
+            GameObject myObs = Instantiate(obs, this.transform);
+            obsList.Add(myObs);
+        }
+    }
+    private void generatedObsFromSave(List<Vector3> obsPos,List<Quaternion> obsRot)
+    {
+        int i = 0;
+        foreach (Vector3 pos in obsPos)
+        {
+            Quaternion rot = obsRot[i];
+            i++;
+            GameObject myObs = Instantiate(obstacle, this.transform);
+            myObs.transform.localPosition = pos;
+            myObs.transform.rotation = rot;
+            obsList.Add(myObs);
+        }
+    }
+
     private bool checkDistance(Vector3 my_obs)
     {
         foreach(GameObject obs in obsList)

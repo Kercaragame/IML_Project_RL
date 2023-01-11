@@ -1,13 +1,12 @@
-default_settings: null
 behaviors:
   BasiqueAgentAdvanced:
     # Configuration de l'entrainement
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 1000000
+    max_steps: 5000000
     time_horizon: 64
-    summary_freq: 10000
+    summary_freq: 50000
     threaded: false
     trainer_type: ppo
 
@@ -15,7 +14,7 @@ behaviors:
       # Hyperparametres communs à tous les trainer
       batch_size: 1024
       buffer_size: 10240
-      learning_rate: 0.00003
+      learning_rate: 3.0e-4
       learning_rate_schedule: linear
 
       # Hyperparametres spécifique à PPO

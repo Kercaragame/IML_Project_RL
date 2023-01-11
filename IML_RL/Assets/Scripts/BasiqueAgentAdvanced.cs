@@ -19,16 +19,20 @@ public class BasiqueAgentAdvanced : BasiqueAgent
         this.transform.LookAt(targetPostition);
     }
 
-
+    public override void Initialize()
+    {
+        base.Initialize();
+        managerAdvanced.initRun();
+    }
     public override void CollectObservations(VectorSensor sensor)
     {
         //base.CollectObservations(sensor);
         sensor.AddObservation(this.transform.localPosition);
         sensor.AddObservation(Objectif.transform.localPosition);
-        foreach (GameObject obs in _obsList)
+        /*foreach (GameObject obs in _obsList)
         {
             sensor.AddObservation(obs.transform.localPosition);
-        }
+        }*/
 
     }
     public override void OnActionReceived(ActionBuffers actions)
@@ -45,13 +49,9 @@ public class BasiqueAgentAdvanced : BasiqueAgent
     private void customRewardToGoal()
     {
         float distanceToGoal = Vector3.Distance(this.transform.localPosition, Objectif.transform.localPosition);
-        //print(1/distanceToGoal * 0.001f);
-        AddReward(1 / distanceToGoal * 0.001f);
-    }
-
-    public void setObs(List<GameObject> obsList)
-    {
-        _obsList = obsList;
+        //print(distanceToGoal * 0.001f);
+        AddReward(- distanceToGoal * 0.001f);
+        //AddReward(1 / distanceToGoal * 0.0008f);
     }
 
     //Gestion du Reward
@@ -70,18 +70,17 @@ public class BasiqueAgentAdvanced : BasiqueAgent
         if (collision.collider.CompareTag("wall"))
         {
             //getPunition
-            //SetReward(-1f);
-            AddReward(-1f);
+            SetReward(-1f);
             managerAdvanced.FailedTask();
             EndEpisode();
         }
 
         if (collision.collider.CompareTag("obs"))
         {
-  
+
             //getPunition
-            //SetReward(-1f);
-            AddReward(-1f);
+            SetReward(-1f);
+            //managerAdvanced.hitSmthTask();
             managerAdvanced.FailedTask();
             EndEpisode();
         }

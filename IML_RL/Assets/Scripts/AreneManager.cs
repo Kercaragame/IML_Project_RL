@@ -17,6 +17,10 @@ public class AreneManager : MonoBehaviour
     [SerializeField]
     protected Material looseMaterial;
     [SerializeField]
+    protected Material resetMaterial;
+    [SerializeField]
+    protected Material hitMaterial;
+    [SerializeField]
     protected MeshRenderer floorMeshRenderer;
 
 
@@ -40,7 +44,7 @@ public class AreneManager : MonoBehaviour
 
     }
 
-    public virtual void SuccesTask()
+    public void SuccesTask()
     {
         floorMeshRenderer.material = winMaterial;
     }
@@ -48,5 +52,15 @@ public class AreneManager : MonoBehaviour
     public void FailedTask()
     {
         floorMeshRenderer.material = looseMaterial;
+    }
+
+    public void hitSmthTask()
+    {
+        floorMeshRenderer.material = hitMaterial;
+    }
+
+    public void resetFloorTask()
+    {
+        floorMeshRenderer.material = resetMaterial;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 609740355971055420}
   - component: {fileID: 609740355971055421}
   - component: {fileID: 609740355971055362}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (2)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5217
+  m_VersionIndex: 5280
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6427
+  m_VersionIndex: 6490
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -812,6 +812,7 @@ GameObject:
   - component: {fileID: 609740357286692354}
   - component: {fileID: 1144520213927609362}
   - component: {fileID: 3342589172227131221}
+  - component: {fileID: 7803133950289740304}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -827,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609740357286692356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.42, y: 1.93, z: -2.76}
+  m_LocalPosition: {x: 1.42, y: 1.93, z: -4.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -957,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 1
   TakeActionsBetweenDecisions: 1
 --- !u!114 &1144520213927609362
 MonoBehaviour:
@@ -977,7 +978,7 @@ MonoBehaviour:
   MaxStep: 3500
   manager: {fileID: 0}
   Objectif: {fileID: 609740357505485845}
-  speed: 15
+  speed: 30
   jumpForce: 5
   managerAdvanced: {fileID: 3332349865100890181}
   _obsList: []
@@ -993,18 +994,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SensorName: RayPerceptionSensor
+  m_SensorName: RayFront
   m_DetectableTags:
   - obs
-  m_RaysPerDirection: 5
-  m_MaxRayDegrees: 180
-  m_SphereCastRadius: 0
+  - wall
+  m_RaysPerDirection: 4
+  m_MaxRayDegrees: 60
+  m_SphereCastRadius: 0.5
   m_RayLength: 7
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967241
+    m_Bits: 192
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0.12644883, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
+--- !u!114 &7803133950289740304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609740357286692356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayAround
+  m_DetectableTags:
+  - obs
+  - wall
+  m_RaysPerDirection: 3
+  m_MaxRayDegrees: 160
+  m_SphereCastRadius: 0.5
+  m_RayLength: 7
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  m_ObservationStacks: 1
+  rayHitColor: {r: 0.90552056, g: 1, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0
   m_EndVerticalOffset: 0
@@ -1202,7 +1232,7 @@ GameObject:
   - component: {fileID: 609740357570696929}
   - component: {fileID: 609740357570696934}
   - component: {fileID: 609740357570696935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (3)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1460,7 +1490,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5276
+  m_VersionIndex: 5339
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1570,7 +1600,7 @@ GameObject:
   - component: {fileID: 609740357636249113}
   - component: {fileID: 609740357636249118}
   - component: {fileID: 609740357636249119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (1)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1828,7 +1858,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5192
+  m_VersionIndex: 5255
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1936,7 +1966,7 @@ GameObject:
   - component: {fileID: 3332349865100890181}
   m_Layer: 0
   m_Name: Arene Type 2
-  m_TagString: Untagged
+  m_TagString: areneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1979,13 +2009,18 @@ MonoBehaviour:
   agent: {fileID: 609740357286692356}
   winMaterial: {fileID: 2100000, guid: 8fe4a71a5ef9969428f52b369fdecc1c, type: 2}
   looseMaterial: {fileID: 2100000, guid: b1a0349e4e5ad434bb2ff71e16faf3a8, type: 2}
+  resetMaterial: {fileID: 2100000, guid: 1ccef4b17c409424682800bbe7b08dc3, type: 2}
+  hitMaterial: {fileID: 2100000, guid: f4c1f1b38f0172b49b0d24a6a6f06180, type: 2}
   floorMeshRenderer: {fileID: 609740356015866597}
   obstacle: {fileID: 7535267219230184518, guid: 1e476ba8f16939b43b4c862c2cd479db, type: 3}
-  nombreObstacle: 0
-  margeBtwObsX: 2
+  nombreObstacle: 5
+  margeBtwObsX: 1
   margeBtwObsZ: 1
   margeToObjectif: 5
   margeToOBS: 2
+  generateOBSOnce: 1
+  isMainArene: 1
+  isSubscribeArene: 0
   obsList: []
   agentScript: {fileID: 1144520213927609362}
 --- !u!1 &609740357659994286
@@ -2002,7 +2037,7 @@ GameObject:
   - component: {fileID: 609740357659994283}
   - component: {fileID: 609740357659994280}
   - component: {fileID: 609740357659994281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -2260,7 +2295,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5192
+  m_VersionIndex: 5255
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

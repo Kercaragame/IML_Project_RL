@@ -1,0 +1,65 @@
+{
+    "BasiqueAgentAdvanced": {
+        "checkpoints": [
+            {
+                "steps": 3499977,
+                "file_path": "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-3499977.onnx",
+                "reward": 0.6430201485892323,
+                "creation_time": 1673439386.8993618,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-3499977.pt"
+                ]
+            },
+            {
+                "steps": 3999936,
+                "file_path": "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-3999936.onnx",
+                "reward": 0.7083921781901655,
+                "creation_time": 1673439814.278367,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-3999936.pt"
+                ]
+            },
+            {
+                "steps": 4499957,
+                "file_path": "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-4499957.onnx",
+                "reward": 0.7260555430816916,
+                "creation_time": 1673440240.1848202,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-4499957.pt"
+                ]
+            },
+            {
+                "steps": 4999975,
+                "file_path": "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-4999975.onnx",
+                "reward": 0.7089911252260208,
+                "creation_time": 1673440672.1697648,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-4999975.pt"
+                ]
+            },
+            {
+                "steps": 5000039,
+                "file_path": "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-5000039.onnx",
+                "reward": 0.7089911252260208,
+                "creation_time": 1673440672.2240596,
+                "auxillary_file_paths": [
+                    "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-5000039.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000039,
+            "file_path": "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced.onnx",
+            "reward": 0.7089911252260208,
+            "creation_time": 1673440672.2240596,
+            "auxillary_file_paths": [
+                "results\\advancedAgent_5_OBS_noAlea_v3\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-5000039.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
