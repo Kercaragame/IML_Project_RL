@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 6
+    VectorObservationSize: 21
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -977,7 +977,7 @@ MonoBehaviour:
   MaxStep: 3500
   manager: {fileID: 0}
   Objectif: {fileID: 609740357505485845}
-  speed: 15
+  speed: 60
   jumpForce: 5
   managerAdvanced: {fileID: 3332349865100890181}
   _obsList: []
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   looseMaterial: {fileID: 2100000, guid: b1a0349e4e5ad434bb2ff71e16faf3a8, type: 2}
   floorMeshRenderer: {fileID: 609740356015866597}
   obstacle: {fileID: 7535267219230184518, guid: 1e476ba8f16939b43b4c862c2cd479db, type: 3}
-  nombreObstacle: 0
+  nombreObstacle: 5
   margeBtwObsX: 2
   margeBtwObsZ: 1
   margeToObjectif: 5

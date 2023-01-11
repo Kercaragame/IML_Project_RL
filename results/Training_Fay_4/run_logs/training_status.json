@@ -1,0 +1,38 @@
+{
+    "BasiqueAgentAdvanced": {
+        "checkpoints": [
+            {
+                "steps": 499981,
+                "file_path": "results\\TRaining_Fay_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499981.onnx",
+                "reward": 0.7684962109316128,
+                "creation_time": 1673267769.8296733,
+                "auxillary_file_paths": [
+                    "results\\TRaining_Fay_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499981.pt"
+                ]
+            },
+            {
+                "steps": 500029,
+                "file_path": "results\\TRaining_Fay_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-500029.onnx",
+                "reward": 0.7694677015779172,
+                "creation_time": 1673267769.8809314,
+                "auxillary_file_paths": [
+                    "results\\TRaining_Fay_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-500029.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500029,
+            "file_path": "results\\TRaining_Fay_4\\BasiqueAgentAdvanced.onnx",
+            "reward": 0.7694677015779172,
+            "creation_time": 1673267769.8809314,
+            "auxillary_file_paths": [
+                "results\\TRaining_Fay_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-500029.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

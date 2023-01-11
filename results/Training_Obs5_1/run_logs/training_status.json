@@ -1,0 +1,38 @@
+{
+    "BasiqueAgentAdvanced": {
+        "checkpoints": [
+            {
+                "steps": 499993,
+                "file_path": "results\\Training_Obs5_1\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499993.onnx",
+                "reward": -0.5021230753889119,
+                "creation_time": 1673431999.9987652,
+                "auxillary_file_paths": [
+                    "results\\Training_Obs5_1\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499993.pt"
+                ]
+            },
+            {
+                "steps": 500025,
+                "file_path": "results\\Training_Obs5_1\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-500025.onnx",
+                "reward": -0.4910369779673412,
+                "creation_time": 1673432000.052625,
+                "auxillary_file_paths": [
+                    "results\\Training_Obs5_1\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-500025.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500025,
+            "file_path": "results\\Training_Obs5_1\\BasiqueAgentAdvanced.onnx",
+            "reward": -0.4910369779673412,
+            "creation_time": 1673432000.052625,
+            "auxillary_file_paths": [
+                "results\\Training_Obs5_1\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-500025.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

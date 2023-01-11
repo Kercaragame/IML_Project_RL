@@ -81,7 +81,7 @@ public class BasiqueAgentAdvanced : BasiqueAgent
   
             //getPunition
             //SetReward(-1f);
-            AddReward(-1f);
+            AddReward(-2f);
             managerAdvanced.FailedTask();
             EndEpisode();
         }

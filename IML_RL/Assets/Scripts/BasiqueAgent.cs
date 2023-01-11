@@ -18,8 +18,8 @@ public class BasiqueAgent : Agent
     public float speed;
     public float jumpForce;
 
-    private float dirX;
-    private float dirZ;
+    protected float dirX;
+    protected float dirZ;
 
 
     private void Start()
