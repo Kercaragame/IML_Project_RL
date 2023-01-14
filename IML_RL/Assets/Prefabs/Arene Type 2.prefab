@@ -2019,8 +2019,11 @@ MonoBehaviour:
   margeToObjectif: 5
   margeToOBS: 2
   generateOBSOnce: 1
-  isMainArene: 1
+  isMainArene: 0
   isSubscribeArene: 0
+  testTraining: 1
+  posSpawnOBS: []
+  rotSpawnOBS: []
   obsList: []
   agentScript: {fileID: 1144520213927609362}
 --- !u!1 &609740357659994286
