@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5280
+  m_VersionIndex: 5301
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6490
+  m_VersionIndex: 6508
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 6
+    VectorObservationSize: 21
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -922,7 +922,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: f7f59d49514c5594980af161ed607789, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: BasiqueAgentAdvanced
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5339
+  m_VersionIndex: 5357
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5255
+  m_VersionIndex: 5273
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2022,8 +2022,18 @@ MonoBehaviour:
   isMainArene: 0
   isSubscribeArene: 0
   testTraining: 1
-  posSpawnOBS: []
-  rotSpawnOBS: []
+  posSpawnOBS:
+  - {x: 4.8, y: 2.02, z: -0.08}
+  - {x: -2.48, y: 2.02, z: 5.27}
+  - {x: -4.98, y: 2.02, z: -2.55}
+  - {x: 6.25, y: 2.02, z: 3.56}
+  - {x: 3.22, y: 2.02, z: 7.39}
+  rotSpawnOBS:
+  - {x: 0, y: 0.80385685, z: 0, w: 0.59482276}
+  - {x: 0, y: 0.9961947, z: 0, w: 0.087155804}
+  - {x: 0, y: 0.9366722, z: 0, w: 0.35020733}
+  - {x: 0, y: 0.9986295, z: 0, w: 0.052335974}
+  - {x: 0, y: -0.62251467, z: 0, w: 0.78260815}
   obsList: []
   agentScript: {fileID: 1144520213927609362}
 --- !u!1 &609740357659994286
@@ -2298,7 +2308,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5255
+  m_VersionIndex: 5276
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
