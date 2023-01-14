@@ -14,7 +14,7 @@ Ce que attend le prof :
 - Takeaways (at least 2 bullet points with 2-3 sentences per bullet point): What are your key takeaways from this project that would help you/others in future robot programming assignments working in pairs? For each takeaway, provide a few sentences of elaboration.
 
 ### Description des Environnements virtuels créés
-Pour gérer l'environnement nous avons concu plusieurs scripts : 
+Pour gérer l'environnement nous avons conçu plusieurs scripts : 
 - AreneManager
   - Fonctionnalitées :
     - resetRun() -> Permet de gerer le positionnement de l'agent et de l'objectif sur une map de taille petite
@@ -23,8 +23,11 @@ Pour gérer l'environnement nous avons concu plusieurs scripts :
 - AreneManagerAdvanced hérite de AreneManger :
   - Fonctionnalitées :
     - resetRun() -> Redefini resetRun afin qu'elle soit efficace sur des environnment de taille grande avec des obs
-    - SuccesTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
-    - FailedTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
+    - initRun() -> Permet de gérer l'initialisation des entrainement afin de choisir le type d'aleatoires (Plusieurs map différentes,Un meme type de map) ce qui permet d'entrainer notre agent de manière pousser sur différent schema d'apprentissage
+    - Update() -> Retour utilisateur pour voir ce qui influence les décisions de l'agent (Raycast ...)
+    - generatedObsFromSave() -> Génération des obstacles de manière aléatoire.
+    - checkDistance() -> Règles pour la généraiton des obstacles...
+    - subscribeOBS() -> permet de copier la structure d'une map sur d'autres mapa fin d'accelerer l'entrainement
 
 Ces scripts permettent toutes la gestion de la création de l'environnement aléatoirement ce qui est très important dans le processus d'entrainement d'un agent de manière efficace afin d'eviter l'overfitting sur un seul et meme environnement.
 
