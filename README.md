@@ -33,3 +33,9 @@ Pour gérer l'environnement nous avons conçu plusieurs scripts :
 Ces scripts permettent toutes la gestion de la création de l'environnement aléatoirement ce qui est très important dans le processus d'entraînement d'un agent de manière efficace afin d'éviter l'overfitting sur un seul et même environnement. Ils permettent aussi de visualiser l'agent entraîner sur des maps choisies afin de voir si l'entraînement à été efficace et si l'agent RL réussi bien les tâches.
 
 ### Description de l'entrainement de l'IA
+
+### Challenges
+Nous avons rencontrés plusieurs challenges lors de ce projet : 
+- La création de l'environnement en aléatoire : En effet la mise en place de l'algorithme permettant de crée un envirronement généré aléatoirement soumis à plusieurs règles (Distance minimum entre les obstacles,avec le joueurs, entre l'objectif et le joueurs, le fait que l'envirronement puisse se détruire et se reconstruire de maniere fluide et rapide pendant l'entrainement ...) à pris beaucoup de temps et à necessité plusieurs phase de test afin de le perfectionner et de le valider.
+- Le choix et la gestion des données à suivre en entrée de notre réseau de neuronnes (Position des obstacles vs Système de raycast pour détecter les obastacles...)
+- La parametrisation des hyperparametres de l'environnement. (Developpement par BENJI)
