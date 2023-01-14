@@ -9,12 +9,23 @@ Ce que attend le prof :
 
 - Objectives description (2-3 sentences): Describe the goal of this project.
 - High-level description (1 paragraph): At a high-level, describe how you used IML
-Challenges (1 paragraph): Describe the challenges you faced and how you overcame them.
-Future work (1 paragraph): If you had more time, how would you improve your implementation?
-Takeaways (at least 2 bullet points with 2-3 sentences per bullet point): What are your key takeaways from this project that would help you/others in future robot programming assignments working in pairs? For each takeaway, provide a few sentences of elaboration.
+- Challenges (1 paragraph): Describe the challenges you faced and how you overcame them.
+- Future work (1 paragraph): If you had more time, how would you improve your implementation?
+- Takeaways (at least 2 bullet points with 2-3 sentences per bullet point): What are your key takeaways from this project that would help you/others in future robot programming assignments working in pairs? For each takeaway, provide a few sentences of elaboration.
 
 ### Description des Environnements virtuels créés
+Pour gérer l'environnement nous avons concu plusieurs scripts : 
+- AreneManager
+  - Fonctionnalitées :
+    - resetRun() -> Permet de gerer le positionnement de l'agent et de l'objectif sur une map de taille petite
+    - SuccesTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
+    - FailedTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
+- AreneManagerAdvanced hérite de AreneManger :
+  - Fonctionnalitées :
+    - resetRun() -> Redefini resetRun afin qu'elle soit efficace sur des environnment de taille grande avec des obs
+    - SuccesTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
+    - FailedTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
 
-*A faire par Enzo*
+Ces scripts permettent toutes la gestion de la création de l'environnement aléatoirement ce qui est très important dans le processus d'entrainement d'un agent de manière efficace afin d'eviter l'overfitting sur un seul et meme environnement.
 
 ### Description de l'entrainement de l'IA
