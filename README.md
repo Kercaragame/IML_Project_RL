@@ -14,21 +14,22 @@ Ce que attend le prof :
 - Takeaways (at least 2 bullet points with 2-3 sentences per bullet point): What are your key takeaways from this project that would help you/others in future robot programming assignments working in pairs? For each takeaway, provide a few sentences of elaboration.
 
 ### Description des Environnements virtuels créés
+
 Pour gérer l'environnement nous avons conçu plusieurs scripts : 
 - AreneManager
-  - Fonctionnalitées :
-    - resetRun() -> Permet de gerer le positionnement de l'agent et de l'objectif sur une map de taille petite
-    - SuccesTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
-    - FailedTask() -> Retour utilisateur pour voir l'évolution de l'entrainement
-- AreneManagerAdvanced hérite de AreneManger :
-  - Fonctionnalitées :
-    - resetRun() -> Redefini resetRun afin qu'elle soit efficace sur des environnment de taille grande avec des obs
-    - initRun() -> Permet de gérer l'initialisation des entrainement afin de choisir le type d'aleatoires (Plusieurs map différentes,Un meme type de map) ce qui permet d'entrainer notre agent de manière pousser sur différent schema d'apprentissage
+  - Fonctionnalités :
+    - resetRun() -> Permet de gérer le positionnement de l'agent et de l'objectif sur une map de taille petite
+    - SuccesTask() -> Retour utilisateur pour voir l'évolution de l'entraînement
+    - FailedTask() -> Retour utilisateur pour voir l'évolution de l'entraînement
+- AreneManagerAdvanced hérite de AreneManager :
+  - Fonctionnalités :
+    - resetRun() -> Redéfini resetRun afin qu'elle soit efficace sur des environnements de taille grande avec des obstacles
+    - initRun() -> Permet de gérer l'initialisation des entraînements afin de choisir le type d'aléatoires (Plusieurs map différentes, Un même type de map,...) ce qui permet d'entraîner notre agent de manière poussée sur différents schémas d'apprentissage
     - Update() -> Retour utilisateur pour voir ce qui influence les décisions de l'agent (Raycast ...)
     - generatedObsFromSave() -> Génération des obstacles de manière aléatoire.
-    - checkDistance() -> Règles pour la généraiton des obstacles...
-    - subscribeOBS() -> permet de copier la structure d'une map sur d'autres mapa fin d'accelerer l'entrainement
+    - checkDistance() -> Règles pour la génération des obstacles...
+    - subscribeOBS() -> Permet de copier la structure d'une map sur d'autres maps afin d'accélérer l'entraînement
 
-Ces scripts permettent toutes la gestion de la création de l'environnement aléatoirement ce qui est très important dans le processus d'entrainement d'un agent de manière efficace afin d'eviter l'overfitting sur un seul et meme environnement.
+Ces scripts permettent toutes la gestion de la création de l'environnement aléatoirement ce qui est très important dans le processus d'entraînement d'un agent de manière efficace afin d'éviter l'overfitting sur un seul et même environnement. Ils permettent aussi de visualiser l'agent entraîner sur des maps choisies afin de voir si l'entraînement à été efficace et si l'agent RL réussi bien les tâches.
 
 ### Description de l'entrainement de l'IA
