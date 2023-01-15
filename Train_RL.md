@@ -71,23 +71,19 @@ Le dossier avec les résultats est le dossier *results* qui est l'emplacement ou
 
 (Optionnel) Vous pouvez installer la bibliothèque tensorflow comme demandé lors de l'exécution de la commande mais cela n'est en rien obligatoire.
 
-**TODO** :lien vers une autre page expliquant les différents graphes et ce que l'on y fait 
-
-**ajouter photo montrant une fenetre de tensorboard**
-
 ### Utilisation des trainings
 
 Suite à la phase d'training et la comparaison entre ceux-ci vous allez pouvoir choisir l'IA entrainée qui sera ensuite mise dans le robot.
 
 Pour récupérer l'IA utilisable par unity il faudra aller chercher le fichier *.omnx* situé dans le dossier avec le nom de l'IA choisi puis dans le sous dossier *BasiqueAgent* qui correspond au nom que nous avons donné à l'IA dans Unity. 
 
-**ajouter photo explicative**
+<img src="results/Screen/explication_omnx.png" align="middle" width="2000"/>
 
 Ensuite importer ce fichier dans Unity par un copier / coller. 
 
 Enfin il faudra sélectionner l'agent dans Unity et dans les paramètres de la section "Behavior Parameters" dans l'option "Model" glisser le fichier .omnx que vous êtes allé chercher précédemment.
 
-**ajouter photo explicative**
+<img src="results/Screen/explication_application_omnx.png" align="middle" width="2000"/>
 
 Vous pourrez maintenant utiliser le robot avec l'IA sélectionnée en cliquant sur le bouton play de Unity
 
