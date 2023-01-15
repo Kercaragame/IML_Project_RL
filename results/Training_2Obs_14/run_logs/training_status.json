@@ -1,0 +1,47 @@
+{
+    "BasiqueAgentAdvanced": {
+        "checkpoints": [
+            {
+                "steps": 499993,
+                "file_path": "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499993.onnx",
+                "reward": 0.819402046456933,
+                "creation_time": 1673357023.0889046,
+                "auxillary_file_paths": [
+                    "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-499993.pt"
+                ]
+            },
+            {
+                "steps": 999992,
+                "file_path": "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999992.onnx",
+                "reward": 0.9126362244947813,
+                "creation_time": 1673357770.855787,
+                "auxillary_file_paths": [
+                    "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999992.pt"
+                ]
+            },
+            {
+                "steps": 1000004,
+                "file_path": "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1000004.onnx",
+                "reward": 0.912943486426014,
+                "creation_time": 1673357770.9042408,
+                "auxillary_file_paths": [
+                    "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1000004.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000004,
+            "file_path": "results\\Training_2Obs_14\\BasiqueAgentAdvanced.onnx",
+            "reward": 0.912943486426014,
+            "creation_time": 1673357770.9042408,
+            "auxillary_file_paths": [
+                "results\\Training_2Obs_14\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1000004.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
