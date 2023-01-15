@@ -34,15 +34,8 @@ Nous allons aussi augmenter le temps de training de 2 millions de step a 2.5 mil
 ### Résultat
 
 
-## Training_NoAlea_n-1
+## Training_NoAlea_5
 
 ### Set Up
 Augmenter l'epsilon pour voir si l'IA apprends plus rapidement
 
-
-## Training_NoAlea_n
-
-### Set Up
-Pour pouvoir comparer avec des résultats que nous aurions pu avoir avant nous allons retirer la reward qui evolue avec le temps
-
-### Résultats

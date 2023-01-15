@@ -50,7 +50,7 @@ public class BasiqueAgentAdvanced : BasiqueAgent
     {
         float distanceToGoal = Vector3.Distance(this.transform.localPosition, Objectif.transform.localPosition);
         //print(distanceToGoal * 0.001f);
-        AddReward(- distanceToGoal * 0.0001f);
+        AddReward(- distanceToGoal * 0.001f);
         //AddReward(1 / distanceToGoal * 0.0008f);
     }
 
