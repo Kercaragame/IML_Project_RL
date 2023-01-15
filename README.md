@@ -128,3 +128,17 @@ Nous avons plusieurs points d'amélioration pour le futur :
 - Paramétrisation du fichier *.yaml*: Il y a 2 points d'amélioration lié au fichier *.yaml*:
     - Paramétrisation de l'IA : Dans ce projet nous ne nous sommes concentrés uniquement sur l'entraineur PPO, qui est celui par défaut, mais il y a aussi d'autre entraineur que nous n'avons pas tester tel que SAC et POCA
     - Paramétrisation de l'environnement : Nous pouvons aussi modifier directement dans le fichier *.yaml* l'environnement d'entrainement que nous voulons pour ne pas rendre le projet encore plus difficile nous avons choisi de ne pas toucher à ces paramètres.
+
+### Démonstration
+
+#### Agent non entrainé sur petite map sans obstacles
+![PetiteMapSansObs_Before_Learning](https://user-images.githubusercontent.com/64093073/212538462-ba910de1-a86d-4be4-9553-a3eaa573887d.png)
+
+#### Agent entrainé sur petite map sans obstacles
+![PetiteMapSansObs_After_Learning](https://user-images.githubusercontent.com/64093073/212538490-203a575e-e88a-4f44-91a1-b7cd349c6329.png)
+
+#### Agent non entrainé sur grande map avec obstacles aléatoire
+![GrandeMapAvecOBs_Before_Learning](https://user-images.githubusercontent.com/64093073/212538507-6569cfde-0b00-46ca-b541-db1386181b09.png)
+
+#### Agent entrainé sur grande map avec obstacles aléatoire
+![GrandeMapAvecOBs_After_Learning](https://user-images.githubusercontent.com/64093073/212538546-23f5d50e-ddaa-4533-8f22-2ebe15fa98f4.png)
