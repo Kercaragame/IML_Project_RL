@@ -2,7 +2,7 @@
 
 Ce projet a été réalisé dans le cadre du modules IML du Master SIIA de l'UBO. Ce projet a été réalisé par MODENA Enzo et GEORGES Benjamin.
 
-Ce projet & été créé sur Unity 2021.3.9f1 (LTS) avec le package mlagents version 2.0.1
+Ce projet a été créé sur Unity 2021.3.9f1 (LTS) avec le package mlagents version 2.0.1
 
 ## Table des matières
 
@@ -58,11 +58,11 @@ Une fois l'environnement créer nous avons commencé l'entrainement sur l'arène
 
 L'arène 1 est une petite arène entourée de mur. Le Robot que l'IA contrôle ainsi que l'objectif sont placé de façon aléatoire à chaque fin d'époque. 
 
-En ce qui concerne les rewards, nous avons mis une reward positif pour l'objectif et une rewrad négative sur les murs.
+En ce qui concerne les rewards, nous avons mis une reward positif pour l'objectif et une reward négative sur les murs.
 
 #### Entrainement de l'IA
 
-Pour entrainer plus rapidement notre IA nous créé 16 fois l'arène pour nous permettre de gagner du temps sur le training qui durait plusieurs minutes voir dizaines de minutes.
+Pour entrainer plus rapidement notre IA nous avons créé 16 fois l'arène pour nous permettre de gagner du temps sur le training qui durait plusieurs minutes voir dizaines de minutes.
 
 Nous avons commencé à comprendre les différents paramètres du fichier *.yaml* qui correspond à tous les paramètres pour l'environnement d'entrainement et de l'IA.
 
@@ -70,7 +70,7 @@ Voici le lien vers la documentation du fichier *.yaml* : https://github.com/Unit
 
 ### Arène 2, Version 1
 
-Suite à l'entrainement sur l'arène 1 qui nous a permis de comprendre comment on entrainer une IA avec mlagents, nous sommes passées à la seconde arène qui est plus grande et avec des obstacles.
+Suite à l'entrainement sur l'arène 1 qui nous a permis de comprendre comment on entraine une IA avec mlagents, nous sommes passées à la seconde arène qui est plus grande et avec des obstacles.
 
 #### Description de l'arène 2
 
@@ -80,13 +80,13 @@ En ce qui concerne les rewards :
 - objectif : reward positive (1)
 - rapprochement entre le robot et l'objectif : reward positive (1/distance  * 0.0001)
 - murs : reward négative (-1)
-- obstacles : reward négative (-2)
+- obstacles : reward négative (-1)
 
 L'autre changement est cette reward positive qui correspond au rapprochement entre le robot et l'objectif, c'est à dire que plus le robot est proche de l'objectif plus sa reward augmente. Cela permettra au robot de se rapprocher plus rapidement de l'objectif.
 
 #### Entrainement de l'IA 
 
-Pour entrainer plus rapidement notre IA nous créé 8 fois l'arène pour nous permettre de gagner du temps sur le training qui durait plusieurs minutes voire dizaines de minutes.
+Pour entrainer plus rapidement notre IA nous avons créé 8 fois l'arène pour nous permettre de gagner du temps sur le training qui durait plusieurs minutes voire dizaines de minutes.
 
 <img src="results/Screen/image_8arenes_Alea.png" align="middle" width="2000"/>
 
@@ -94,7 +94,7 @@ Pour commencer nous avons entrainer l'IA sur l'arène sans obstacles. L'IA a rap
 
 Nous avons enchainé sur un entrainement avec 2 obstacles. C'est à partir de ce moment où nous avons dû réellement changer les paramètres de l'IA pour qu'elle puisse atteindre de façon correcte l'objectif. Nous avons fait une quinzaine d’entrainement différents toutes les informations de ses tests sont marqué sous forme de notes dans le fichier [test_training_arene2](Config/test_training_arene2.md). Dans ce fichier vous pourrez trouver tous ce que nous avons modifier à chaque entrainement.
 
-Lorsque nous avions trouvé quelques choses de correct, nous sommes passé à 5 obstacles. Cependant nous sommes assez rapidement arrivés à la conclusion que l'IA n’arrivera pas à résoudre ce problème. 
+Lorsque nous avions trouvé quelques choses de correct, nous sommes passé à 5 obstacles. Cependant nous sommes assez rapidement arrivés à la conclusion que l'IA n’arriverai pas à résoudre ce problème. 
 
 Nous avons donc choisi de créer une nouvelle version de cette arène.
 
@@ -108,7 +108,7 @@ Nous allons ici énumérer seulement les changements avec la version 1.
 
 Le problème des obstacles : Suite à la trop grande complexité engendrée par le fait que les obstacles soit recréé à chaque fin d'époques nous avons choisi de créer les obstacles au début de l'entrainement et de ne plus les changer. Seul le robot et l'objectif pourrait changer de place à la fin d'une époque. De plus vu que nous créons plusieurs arènes pour entrainer l'IA nous allons pouvoir faire que toutes les arènes soient avec des obstacles différents ou tous les obstacles au même emplacement.
 
-Le problème de la reward positif au rapprochement entre le robot et l’objectif : Cette reward permettait au robot d'aller rapidement proche de l'objectif. Cependant le robot préférait rester proche de l'objectif qu'aller sur l'objectif. Nous avons donc changé ça pour mettre une reward négative qui décroit en fonction de la distance avec l'objectif. Nous pensons qu'avec ce changement l'IA préfèrera aller directement sur l'objectif. Cette reward est maintenant de (- distance *0.001)
+Le problème de la reward positif au rapprochement entre le robot et l’objectif : Cette reward permettait au robot d'aller rapidement proche de l'objectif. Cependant le robot préférait rester proche de l'objectif qu'aller sur l'objectif. Nous avons donc changé ça pour mettre une reward négative qui décroit en fonction de la distance avec l'objectif. Nous pensons qu'avec ce changement l'IA préfèrera aller directement sur l'objectif. Cette reward est maintenant de (- distance *0.0001)
 
 #### Entrainement de l'IA 
 
