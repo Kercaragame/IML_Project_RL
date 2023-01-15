@@ -15,6 +15,7 @@ Ce projet & été créé sur Unity 2021.3.9f1 (LTS) avec le package mlagents ver
   - [Arène 2, Version 2](#arène-2-version-2)
   - [Conclusion](#conclusion)
 - [Challenges](#challenges)
+- [Points à retenir](#points-à-retenir)
 - [Améliorations futures](#améliorations-futures)
 - [Démonstration](#démonstration)
 
@@ -129,6 +130,12 @@ Nous avons rencontré plusieurs challenges lors de ce projet :
 - La création de l'environnement aléatoire : En effet, la mise en place de l'algorithme permettant de créer un environnement généré aléatoirement soumis à plusieurs règles (distance minimum entre les obstacles, avec le joueur, entre l'objectif et le joueur, le fait que l'environnement puisse se détruire et se reconstruire de manière fluide et rapide pendant l'entraînement...) a pris beaucoup de temps et a nécessité plusieurs phases de test afin de le perfectionner et de le valider.
 - Le choix et la gestion des données à suivre en entrée de notre réseau de neurones (position des obstacles vs système de raycast pour détecter les obstacles...)
 - La paramétrisation des hyperparamètres de l'IA a été un long travail de test durant ce projet. Dans un premier temps grâce à la documentation nous avons pu comprendre les différents paramètres de l'IA. Ensuite nous avons du utiliser les connaissances ainsi acquises pour les appliquer à notre projet. 
+
+## Points à retenir
+Il y a plusieurs points qui seraient intéressant de retenir pour de futurs projets :
+
+- L'aléatoire : c'est une mécanique à double tranchant car très utile pour train une IA en permettant de lui offrir de nombreuses situations différentes. Cependant quand nous l'utilisons trop, comme dans la version 1 de l'arène 2, cela peut poser des problèmes et augmenté énormément la complexité du projet sans trop d'utilité.
+- Le temps d'entrainement : le temps d'entrainement est peut-être très long même pour des projets qui semblent aussi simple que celui-ci. Chacun des entrainements duraient entre 10 minutes et plus d'une heure. Il faut donc bien optimiser son temps pour être plus productif, pour par exemple pour enchaîner les entrainements rapidement et donc pendant les entrainements faire les parties de documentation et de réflexion.
 
 ## Améliorations futures
 Nous avons plusieurs points d'amélioration pour le futur :
