@@ -2,58 +2,58 @@
     "BasiqueAgentAdvanced": {
         "checkpoints": [
             {
-                "steps": 999947,
-                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999947.onnx",
-                "reward": 0.5128789979964494,
-                "creation_time": 1673614239.9010656,
+                "steps": 999958,
+                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999958.onnx",
+                "reward": 0.21950814293490517,
+                "creation_time": 1673781170.6714776,
                 "auxillary_file_paths": [
-                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999947.pt"
+                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-999958.pt"
                 ]
             },
             {
-                "steps": 1499960,
-                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1499960.onnx",
-                "reward": 0.6790753371897154,
-                "creation_time": 1673614672.345605,
+                "steps": 1499988,
+                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1499988.onnx",
+                "reward": 0.6343225052482203,
+                "creation_time": 1673781610.811989,
                 "auxillary_file_paths": [
-                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1499960.pt"
+                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1499988.pt"
                 ]
             },
             {
-                "steps": 1999975,
-                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1999975.onnx",
-                "reward": 0.756834957562387,
-                "creation_time": 1673615124.0794642,
+                "steps": 1999937,
+                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1999937.onnx",
+                "reward": 0.6206428140804574,
+                "creation_time": 1673782069.1151392,
                 "auxillary_file_paths": [
-                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1999975.pt"
+                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-1999937.pt"
                 ]
             },
             {
-                "steps": 2499941,
-                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2499941.onnx",
-                "reward": 0.9428904476974692,
-                "creation_time": 1673615585.4793756,
+                "steps": 2499940,
+                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2499940.onnx",
+                "reward": 0.5107779445186738,
+                "creation_time": 1673782507.0472202,
                 "auxillary_file_paths": [
-                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2499941.pt"
+                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2499940.pt"
                 ]
             },
             {
-                "steps": 2500005,
-                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2500005.onnx",
-                "reward": 0.9428904476974692,
-                "creation_time": 1673615585.5312362,
+                "steps": 2500004,
+                "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2500004.onnx",
+                "reward": 0.5107779445186738,
+                "creation_time": 1673782507.0990822,
                 "auxillary_file_paths": [
-                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2500005.pt"
+                    "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2500004.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 2500005,
+            "steps": 2500004,
             "file_path": "results\\Training_NoAlea_4\\BasiqueAgentAdvanced.onnx",
-            "reward": 0.9428904476974692,
-            "creation_time": 1673615585.5312362,
+            "reward": 0.5107779445186738,
+            "creation_time": 1673782507.0990822,
             "auxillary_file_paths": [
-                "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2500005.pt"
+                "results\\Training_NoAlea_4\\BasiqueAgentAdvanced\\BasiqueAgentAdvanced-2500004.pt"
             ]
         }
     },

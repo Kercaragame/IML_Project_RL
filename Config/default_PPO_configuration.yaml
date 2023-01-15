@@ -14,7 +14,7 @@ behaviors:
       # Hyperparametres communs à tous les trainer
       batch_size: 1024
       buffer_size: 10240
-      learning_rate: 0.001
+      learning_rate: 0.0001
       learning_rate_schedule: linear
 
       # Hyperparametres spécifique à PPO
@@ -29,8 +29,8 @@ behaviors:
     # Configuration du réseau de neuronne
     network_settings:
       normalize: false
-      hidden_units: 256
-      num_layers: 3
+      hidden_units: 128
+      num_layers: 2
       vis_encode_type: simple
       conditioning_type: none
 

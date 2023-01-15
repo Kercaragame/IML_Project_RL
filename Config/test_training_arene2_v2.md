@@ -19,10 +19,16 @@ Les résultats dépendent trop de la carte que l'on va avoir et pour les memes s
 ### Set Up 
 Pour ce training nous allons pas besoin de changer les paramètres de l'arène pour avoir chaque arène aléatoire odnc l'IA s'entrainera sur 12 map différentes 
 
-### Résultats
-Ils sont tres encouragant l'IA train bien voir tres bien les résultats de mean reward sont correct. Cependant il faut remettre en contexte que la reward diminue avec le temps 
+### Résultat
+Il est tres encouragant l'IA aprrend bien voir tres bien les résultats de mean reward sont correct. Cependant il faut remettre en contexte que la reward diminue avec le temps 
 
 ## Training_NoAlea_3_long
+
+### Set up 
+Pour ce training nous passons le temps d'entrainement de 2 millions de step à 5 millions
+
+### Résultats 
+Il n'y a pas grand changement en terme de mean reward par rapport à l'entrainement précédent. Alors que cette entrainement est 2.5 fois plus long que le précédent.
 
 ## Training_NoAlea_4 
 
@@ -32,10 +38,4 @@ Nous allons changer la valeur de la reward diminuant avec le temps, nous allons 
 Nous allons aussi augmenter le temps de training de 2 millions de step a 2.5 millions de step
 
 ### Résultat
-
-
-## Training_NoAlea_5
-
-### Set Up
-Augmenter l'epsilon pour voir si l'IA apprends plus rapidement
-
+L'IA apprends au moins aussi bien que précédement et optiens des résultats tout a fait satisfaisant
