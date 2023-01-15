@@ -47,7 +47,7 @@ Pour ce projet nous avons choisi de faire une IA d'apprentissage par renforcemen
 
 ### Environnement d'entrainement
 
-Avant d'entrainer notre IA nous devions créer l'environnement pour l'entrainer nous vous référons au fichier **Train_RL.md**
+Avant d'entrainer notre IA nous devions créer l'environnement pour l'entrainer nous vous référons au fichier [Train_RL](Train_RL.md)
 
 ### Arène 1
 
@@ -91,7 +91,7 @@ Pour entrainer plus rapidement notre IA nous créé 8 fois l'arène pour nous pe
 
 Pour commencer nous avons entrainer l'IA sur l'arène sans obstacles. L'IA a rapidement réussi à trouver l'objectif comme sur l'arène 1.
 
-Nous avons enchainé sur un entrainement avec 2 obstacles. C'est à partir de ce moment où nous avons dû réellement changer les paramètres de l'IA pour qu'elle puisse atteindre de façon correcte l'objectif. Nous avons fait une quinzaine d’entrainement différents toutes les informations de ses tests sont marqué sous forme de notes dans le fichier [test_training_arene2](Config\test_training_arene2.md). Dans ce fichier vous pourrez trouver tous ce que nous avons modifier à chaque entrainement.
+Nous avons enchainé sur un entrainement avec 2 obstacles. C'est à partir de ce moment où nous avons dû réellement changer les paramètres de l'IA pour qu'elle puisse atteindre de façon correcte l'objectif. Nous avons fait une quinzaine d’entrainement différents toutes les informations de ses tests sont marqué sous forme de notes dans le fichier [test_training_arene2](Config/test_training_arene2.md). Dans ce fichier vous pourrez trouver tous ce que nous avons modifier à chaque entrainement.
 
 Lorsque nous avions trouvé quelques choses de correct, nous sommes passé à 5 obstacles. Cependant nous sommes assez rapidement arrivés à la conclusion que l'IA n’arrivera pas à résoudre ce problème. 
 
@@ -115,7 +115,7 @@ Encore une fois nous avons créé 12 arènes pour entrainer plus rapidement notr
 
 <img src="results/Screen/image_12arenes_noAlea.png" align="middle" width="2000"/>
 
-Nous avons donc créé les arènes avec 5 obstacles qui était aléatoire sur chacune des arènes. Nous avons effectué quelques tests sur cette arène, vous pourrez retrouver toutes nos notes sur ces tests dans le fichier [test_training_arene2_v2](Config\test_training_arene2_v2.md). 
+Nous avons donc créé les arènes avec 5 obstacles qui était aléatoire sur chacune des arènes. Nous avons effectué quelques tests sur cette arène, vous pourrez retrouver toutes nos notes sur ces tests dans le fichier [test_training_arene2_v2](Config/test_training_arene2_v2.md). 
 
 Grace aux tests précédemment réalisés nous avons réussi à trouver une IA très correcte rapidement. 
 
